@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLTA — Zapatillas y calzado para cada paso</title>
+<meta name="description" content="Tienda de zapatos online: zapatillas running, sneakers casuales, calzado formal y botas. Envío gratis desde $80 y 30 días para devoluciones.">
+<meta name="theme-color" content="#0f1216">
+
+<!-- Redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="VOLTA — Zapatillas y calzado para cada paso">
+<meta property="og:description" content="Calzado cómodo, duradero y honesto. Envío gratis desde $80 y 30 días para devoluciones.">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Estilos -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+<!-- ============================================================
+     BARRA DE ANUNCIO
+     ============================================================ -->
+<div class="announce">
+  Envío <b>GRATIS</b> en compras desde $80 · 30 días para devoluciones sin costo · Usa el código <b>VOLTA10</b>
+</div>
+
+<!-- ============================================================
+     CABECERA
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="logo" href="#inicio">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h13l-1-6H4v6Z"/><path d="m17 10 2.2 1.5L22 13v3H4"/><path d="M7 16v3M17 16v3"/></svg>
+        </span>
+        VOLTA
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#tallas">Guía de tallas</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <button class="icon-btn" type="button" id="search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="Abrir buscador">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+
+        <button class="icon-btn" type="button" id="wish-toggle" aria-label="Ver favoritos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          <span class="badge badge--dark" id="wish-badge" hidden>0</span>
+        </button>
+
+        <button class="icon-btn" type="button" id="cart-toggle" aria-label="Abrir carrito de compras" aria-expanded="false" aria-controls="cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="badge" id="cart-badge" hidden>0</span>
+        </button>
+
+        <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Buscador -->
+  <div class="search-panel" id="search-panel">
+    <div class="wrap">
+      <form id="search-form" role="search">
+        <label class="sr-only" for="search-input">Buscar productos</label>
+        <input type="search" id="search-input" placeholder="Busca por modelo o categoría: runner, bota, oxford…" autocomplete="off">
+        <button class="btn btn--dark btn--sm" type="submit">Buscar</button>
+      </form>
+      <p class="search-hint">Prueba con «sneaker», «botas» o «formal». Los resultados se filtran en el catálogo.</p>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="inicio">
+    <div class="wrap hero__grid">
+      <div>
+        <span class="kicker">Nueva colección 2026</span>
+        <h1>Zapatos que te llevan <em>más lejos</em>.</h1>
+        <p class="hero__lead">
+          Zapatillas de running, sneakers casuales, calzado formal y botas.
+          Diseño cómodo, materiales duraderos y precios honestos.
+          Encuentra tu talla perfecta en menos de un minuto.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--dark" href="#productos">
+            Comprar ahora
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--out" href="#categorias">Ver categorías</a>
+        </div>
+
+        <div class="hero__proof">
+          <div class="avatars" aria-hidden="true">
+            <i style="background-image:url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=portrait%20headshot%20of%20a%20smiling%20young%20latina%20woman%20neutral%20background%20natural%20lighting%20photorealistic&image_size=square')"></i>
+            <i style="background-image:url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=portrait%20headshot%20of%20a%20smiling%20man%20with%20short%20beard%20neutral%20background%20natural%20lighting%20photorealistic&image_size=square')"></i>
+            <i style="background-image:url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=portrait%20headshot%20of%20a%20smiling%20woman%20with%20curly%20hair%20neutral%20background%20natural%20lighting%20photorealistic&image_size=square')"></i>
+            <i style="background-image:url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=portrait%20headshot%20of%20a%20smiling%20young%20man%20neutral%20background%20natural%20lighting%20photorealistic&image_size=square')"></i>
+          </div>
+          <p>
+            <b class="stars">★★★★★</b>
+            <span>+12.400 clientes satisfechos en toda Latinoamérica</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="hero__frame">
+          <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20white%20and%20orange%20running%20sneaker%20floating%20in%20mid%20air%20dynamic%20product%20photography%20studio%20lighting%20soft%20shadow%20clean%20light%20beige%20background%20highly%20detailed%20commercial%20shot&image_size=portrait_4_3"
+               alt="Zapatilla deportiva moderna flotando en el aire"
+               width="900" height="920" fetchpriority="high">
+        </div>
+
+        <div class="chip chip--1">
+          <span class="chip__icon" style="background:#fff1ec;color:#ff5c39" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          </span>
+          <span><strong>Envío en 24-48 h</strong>a todo el país</span>
+        </div>
+
+        <div class="chip chip--2">
+          <span class="chip__icon" style="background:#f2f8d4;color:#4e5a20" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <span><strong>Cambio de talla</strong>gratis y sin líos</span>
+        </div>
+
+        <div class="chip chip--3">
+          <span class="chip__icon" style="background:#eef2f6;color:#0f1216" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          </span>
+          <span><strong>Hasta 40% off</strong>en la colección de temporada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CINTA DE CONFIANZA
+       ============================================================ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marquee-track">
+      <span>Visa</span><span>Mastercard</span><span>American Express</span><span>PayPal</span>
+      <span>Pago contra entrega</span><span>Cuotas sin interés</span><span>Devolución 30 días</span><span>Garantía 1 año</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       BENEFICIOS
+       ============================================================ -->
+  <section class="section wrap reveal" aria-label="Ventajas de comprar en VOLTA">
+    <div class="benefits">
+      <article class="benefit">
+        <span class="benefit__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+        <div><h3>Envío gratis desde $80</h3><p>Despacho en 24-48 horas con seguimiento en línea.</p></div>
+      </article>
+      <article class="benefit">
+        <span class="benefit__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></span>
+        <div><h3>30 días para devolver</h3><p>Si no te quedan, los cambiamos sin preguntas.</p></div>
+      </article>
+      <article class="benefit">
+        <span class="benefit__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        <div><h3>Pago 100% seguro</h3><p>Transacciones cifradas y protección al comprador.</p></div>
+      </article>
+      <article class="benefit">
+        <span class="benefit__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><h3>Garantía de 1 año</h3><p>Cobertura ante defectos de fabricación.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CATEGORÍAS
+       ============================================================ -->
+  <section class="section wrap reveal" id="categorias">
+    <div class="section-head">
+      <span class="kicker">Explora</span>
+      <h2>Encuentra tu estilo</h2>
+      <p>Desde entrenamientos exigentes hasta reuniones formales. Tenemos el par correcto para cada momento de tu día.</p>
+    </div>
+
+    <div class="cats">
+      <a class="cat" href="#productos" data-jump-filter="running">
+        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=running%20shoes%20on%20a%20city%20track%20at%20sunrise%20athletic%20sneakers%20close%20up%20dynamic%20sport%20photography%20warm%20light&image_size=portrait_4_3" alt="Zapatillas de running en una pista al amanecer" loading="lazy" width="600" height="720">
+        <span class="cat__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <div class="cat__body"><h3>Running</h3><span>24 modelos</span></div>
+      </a>
+
+      <a class="cat" href="#productos" data-jump-filter="casual">
+        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=white%20leather%20casual%20sneakers%20lifestyle%20shot%20on%20concrete%20surface%20minimal%20urban%20style%20soft%20daylight&image_size=portrait_4_3" alt="Sneakers casuales de cuero blanco" loading="lazy" width="600" height="720">
+        <span class="cat__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <div class="cat__body"><h3>Casual</h3><span>38 modelos</span></div>
+      </a>
+
+      <a class="cat" href="#productos" data-jump-filter="formal">
+        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=elegant%20black%20leather%20oxford%20dress%20shoes%20for%20men%20polished%20studio%20product%20photography%20dark%20neutral%20background&image_size=portrait_4_3" alt="Zapatos formales de cuero negro" loading="lazy" width="600" height="720">
+        <span class="cat__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <div class="cat__body"><h3>Formal</h3><span>19 modelos</span></div>
+      </a>
+
+      <a class="cat" href="#productos" data-jump-filter="botas">
+        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=brown%20leather%20hiking%20boots%20on%20rocky%20mountain%20trail%20outdoor%20adventure%20photography%20natural%20light&image_size=portrait_4_3" alt="Botas de senderismo de cuero sobre roca" loading="lazy" width="600" height="720">
+        <span class="cat__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <div class="cat__body"><h3>Botas</h3><span>15 modelos</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CATÁLOGO
+       ============================================================ -->
+  <section class="section section--tight wrap reveal" id="productos">
+    <div class="section-head">
+      <span class="kicker">Los más vendidos</span>
+      <h2>Productos destacados</h2>
+      <p>Elige tu talla sobre la foto, revisa la ficha rápida y añádelo al carrito en un clic.</p>
+    </div>
+
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filtrar por categoría">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">Todos</button>
+        <button class="filter" type="button" data-filter="running" aria-pressed="false">Running</button>
+        <button class="filter" type="button" data-filter="casual" aria-pressed="false">Casual</button>
+        <button class="filter" type="button" data-filter="formal" aria-pressed="false">Formal</button>
+        <button class="filter" type="button" data-filter="botas" aria-pressed="false">Botas</button>
+      </div>
+
+      <div class="toolbar__right">
+        <p class="result-count" id="result-count" role="status">Mostrando <b>6</b> productos</p>
+        <span class="select-wrap">
+          <label class="sr-only" for="sort">Ordenar productos</label>
+          <select id="sort">
+            <option value="featured">Relevancia</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="rating">Mejor valorados</option>
+          </select>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </span>
+      </div>
+    </div>
+
+    <div class="products" id="products">
+
+      <!-- Producto 1 -->
+      <article class="product" data-id="p1" data-cat="running" data-name="Volta Aero Runner"
+               data-price="129.90" data-old="179.90" data-rating="5" data-reviews="214"
+               data-desc="Zapatilla de running con malla transpirable, entresuela de espuma reactiva y solo 238 g de peso. Pensada para entrenamientos diarios y carreras de 5 a 21 km.">
+        <div class="product__media">
+          <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20white%20and%20lime%20green%20running%20shoe%20side%20view%20lightweight%20mesh%20upper%20studio%20product%20photography%20soft%20shadow%20clean%20light%20background%20e-commerce%20highly%20detailed&image_size=square" alt="Zapatilla Volta Aero Runner" loading="lazy" width="600" height="600">
+          <span class="product__tag">-28%</span>
+          <button class="product__wish" type="button" data-wish="p1" aria-pressed="false" aria-label="Añadir Volta Aero Runner a favoritos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          </button>
+          <button class="product__quick" type="button" data-quick="p1">Vista rápida</button>
+          <div class="product__sizes" role="group" aria-label="Tallas de Volta Aero Runner">
+            <button class="size" type="button" data-size="38" aria-pressed="false">38</button>
+            <button class="size" type="button" data-size="39" aria-pressed="false">39</button>
+            <button class="size" type="button" data-size="40" aria-pressed="false">40</button>
+            <button class="size" type="button" data-size="41" aria-pressed="false">41</button>
+            <button class="size" type="button" data-size="42" aria-pressed="false">42</button>
+            <button class="size" type="button" data-size="43" aria-pressed="false">43</button>
+          </div>
+        </div>
+        <div class="product__body">
+          <span class="product__cat">Running</span>
+          <h3 class="product__name">Volta Aero Runner</h3>
+          <p class="product__rating"><span class="sr-only">Valoración 5 de 5,</span>★★★★★<span>(214)</span></p>
+          <div class="product__prices">
+            <span class="product__price">$129.90</span>
+            <span class="product__old">$179.90</span>
+          </div>
+          <button class="product__add" type="button" data-add="p1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            Añadir al carrito
+          </button>
+        </div>
+      </article>
+
+      <!-- Producto 2 -->
+      <article class="product" data-id="p2" data-cat="casual" data-name="Volta Court Classic"
+               data-price="89.90" data-old="" data-rating="5" data-reviews="96"
+               data-desc="Sneaker de cuero curtido con perfil minimalista y suela de caucho natural. Un básico atemporal que combina con jeans, chinos o vestido.">
+        <div class="product__media">
+          <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=white%20leather%20minimal%20casual%20sneaker%20side%20view%20clean%20design%20studio%20product%20photography%20soft%20shadow%20clean%20light%20background%20e-commerce%20highly%20detailed&image_size=square" alt="Sneaker Volta Court Classic" loading="lazy" width="600" height="600">
+          <span class="product__tag product__tag--new">Nuevo</span>
+          <button class="product__wish" type="button" data-wish="p2" aria-pressed="false" aria-label="Añadir Volta Court Classic a favoritos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          </button>
+          <button class="product__quick" type="button" data-quick="p2">Vista rápida</button>
+          <div class="product__sizes" role="group" aria-label="Tallas de Volta Court Classic">
+            <button class="size" type="button" data-size="38" aria-pressed="false">38</button>
+            <button class="size" type="button" data-size="39" aria-pressed="false">39</button>
+            <button class="size" type="button" data-size="40" aria-pressed="false">40</button>
+            <button class="size" type="button" data-size="41" aria-pressed="false">41</button>
+            <button class="size" type="button" data-size="42" aria-pressed="false">42</button>
+            <button class="size" type="button" data-size="43" aria-pressed="false">43</button>
+          </div>
+        </div>
+        <div class="product__body">
+          <span class="product__cat">Casual</span>
+          <h3 class="product__name">Volta Court Classic</h3>
+          <p class="product__rating"><span class="sr-only">Valoración 5 de 5,</span>★★★★★<span>(96)</span></p>
+          <div class="product__prices">
+            <span class="product__price">$89.90</span>
+          </div>
+          <button class="product__add" type="button" data-add="p2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            Añadir al carrito
+          </button>
+        </div>
+      </article>
+
+      <!-- Producto 3 -->
+      <article class="product" data-id="p3" data-cat="formal" data-name="Volta Oxford Elegance"
+               data-price="159.00" data-old="199.00" data-rating="5" data-reviews="58"
+               data-desc="Zapato oxford de cuero pulido con suela cosida y plantilla acolchada. Elegancia formal con la comodidad suficiente para jornadas largas.">
+        <div class="product__media">
+          <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=black%20polished%20leather%20oxford%20dress%20shoe%20side%20view%20elegant%20studio%20product%20photography%20soft%20shadow%20clean%20light%20background%20e-commerce%20highly%20detailed&image_size=square" alt="Zapato formal Volta Oxford Elegance" loading="lazy" width="600" height="600">
+          <span class="product__tag">-20%</span>
+          <button class="product__wish" type="button" data-wish="p3" aria-pressed="false" aria-label="Añadir Volta Oxford Elegance a favoritos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          </button>
+          <button class="product__quick" type="button" data-quick="p3">Vista rápida</button>
+          <div class="product__sizes" role="group" aria-label="Tallas de Volta Oxford Elegance">
+            <button class="size" type="button" data-size="38" aria-pressed="false">38</button>
+            <button class="size" type="button" data-size="39" aria-pressed="false">39</button>
+            <button class="size" type="button" data-size="40" aria-pressed="false">40</button>
+            <button class="size" type="button" data-size="41" aria-pressed="false">41</button>
+            <button class="size" type="button" data-size="42" aria-pressed="false">42</button>
+            <button class="size" type="button" data-size="43" aria-pressed="false">43</button>
+          </div>
+        </div>
+        <div class="product__body">
+          <span class="product__cat">Formal</span>
+          <h3 class="product__name">Volta Oxford Elegance</h3>
+          <p class="product__rating"><span class="sr-only">Valoración 5 de 5,</span>★★★★★<span>(58)</span></p>
+          <div class="product__prices">
+            <span class="product__price">$159.00</span>
+            <span class="product__old">$199.00</span>
+          </div>
+          <button class="product__add" type="button" data-add="p3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            Añadir al carrito
+          </button>
+        </div>
+      </article>
+
+      <!-- Producto 4 -->
+      <article class="product" data-id="p4" data-cat="botas" data-name="Volta Trail Trekker"
+               data-price="179.50" data-old="" data-rating="4" data-reviews="41"
+               data-desc="Bota de senderismo con membrana impermeable, suela de agarre multidirección y refuerzo en el tobillo. Lista para terrenos irregulares.">
+        <div class="product__media">
+          <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=brown%20leather%20hiking%20boot%20side%20view%20rugged%20sole%20studio%20product%20photography%20soft%20shadow%20clean%20light%20background%20e-commerce%20highly%20detailed&image_size=square" alt="Bota de senderismo Volta Trail Trekker" loading="lazy" width="600" height="600">
+          <span class="product__tag product__tag--new">Nuevo</span>
+          <button class="product__wish" type="button" data-wish="p4" aria-pressed="false" aria-label="Añadir Volta Trail Trekker a favoritos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          </button>
+          <button class="product__quick" type="button" data-quick="p4">Vista rápida</button>
+          <div class="product__sizes" role="group" aria-label="Tallas de Volta Trail Trekker">
+            <button class="size" type="button" data-size="38" aria-pressed="false">38</button>
+            <button class="size" type="button" data-size="39" aria-pressed="false">39</button>
+            <button class="size" type="button" data-size="40" aria-pressed="false">40</button>
+            <button class="size" type="button" data-size="41" aria-pressed="false">41</button>
+            <button class="size" type="button" data-size="42" aria-pressed="false">42</button>
+            <button class="size" type="button" data-size="43" aria-pressed="false">43</button>
+          </div>
+        </div>
+        <div class="product__body">
+          <span class="product__cat">Botas</span>
+          <h3 class="product__name">Volta Trail Trekker</h3>
+          <p class="product__rating"><span class="sr-only">Valoración 4 de 5,</span>★★★★☆<span>(41)</span></p>
+          <div class="product__prices">
+            <span class="product__price">$179.50</span>
+          </div>
+          <button class="product__add" type="button" data-add="p4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            Añadir al carrito
+          </button>
+        </div>
+      </article>
+
+      <!-- Producto 5 -->
+      <article class="product" data-id="p5" data-cat="casual" data-name="Volta Urban Flux"
+               data-price="99.90" data-old="139.90" data-rating="4" data-reviews="132"
+               data-desc="Sneaker urbana de suela gruesa con amortiguación de alto rebote y refuerzos laterales. Estilo streetwear sin sacrificar comodidad.">
+        <div class="product__media">
+          <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=black%20and%20orange%20chunky%20urban%20sneaker%20side%20view%20streetwear%20studio%20product%20photography%20soft%20shadow%20clean%20light%20background%20e-commerce%20highly%20detailed&image_size=square" alt="Sneaker urbana Volta Urban Flux" loading="lazy" width="600" height="600">
+          <span class="product__tag">-29%</span>
+          <button class="product__wish" type="button" data-wish="p5" aria-pressed="false" aria-label="Añadir Volta Urban Flux a favoritos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          </button>
+          <button class="product__quick" type="button" data-quick="p5">Vista rápida</button>
+          <div class="product__sizes" role="group" aria-label="Tallas de Volta Urban Flux">
+            <button class="size" type="button" data-size="38" aria-pressed="false">38</button>
+            <button class="size" type="button" data-size="39" aria-pressed="false">39</button>
+            <button class="size" type="button" data-size="40" aria-pressed="false">40</button>
+            <button class="size" type="button" data-size="41" aria-pressed="false">41</button>
+            <button class="size" type="button" data-size="42" aria-pressed="false">42</button>
+            <button class="size" type="button" data-size="43" aria-pressed="false">43</button>
+          </div>
+        </div>
+        <div class="product__body">
+          <span class="product__cat">Casual</span>
+          <h3 class="product__name">Volta Urban Flux</h3>
+          <p class="product__rating"><span class="sr-only">Valoración 4 de 5,</span>★★★★☆<span>(132)</span></p>
+          <div class="product__prices">
+            <span class="product__price">$99.90</span>
+            <span class="product__old">$139.90</span>
+          </div>
+          <button class="product__add" type="button" data-add="p5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            Añadir al carrito
+          </button>
+        </div>
+      </article>
+
+      <!-- Producto 6 -->
+      <article class="product" data-id="p6" data-cat="botas" data-name="Volta Terra Boot"
+               data-price="149.00" data-old="189.00" data-rating="5" data-reviews="77"
+               data-desc="Botín de cuero de caña corta con forro térmico y cierre lateral. Un híbrido entre elegancia urbana y resistencia para el frío.">
+        <div class="product__media">
+          <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=dark%20grey%20ankle%20leather%20boot%20side%20view%20modern%20design%20studio%20product%20photography%20soft%20shadow%20clean%20light%20background%20e-commerce%20highly%20detailed&image_size=square" alt="Botín de cuero Volta Terra Boot" loading="lazy" width="600" height="600">
+          <span class="product__tag">-21%</span>
+          <button class="product__wish" type="button" data-wish="p6" aria-pressed="false" aria-label="Añadir Volta Terra Boot a favoritos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          </button>
+          <button class="product__quick" type="button" data-quick="p6">Vista rápida</button>
+          <div class="product__sizes" role="group" aria-label="Tallas de Volta Terra Boot">
+            <button class="size" type="button" data-size="38" aria-pressed="false">38</button>
+            <button class="size" type="button" data-size="39" aria-pressed="false">39</button>
+            <button class="size" type="button" data-size="40" aria-pressed="false">40</button>
+            <button class="size" type="button" data-size="41" aria-pressed="false">41</button>
+            <button class="size" type="button" data-size="42" aria-pressed="false">42</button>
+            <button class="size" type="button" data-size="43" aria-pressed="false">43</button>
+          </div>
+        </div>
+        <div class="product__body">
+          <span class="product__cat">Botas</span>
+          <h3 class="product__name">Volta Terra Boot</h3>
+          <p class="product__rating"><span class="sr-only">Valoración 5 de 5,</span>★★★★★<span>(77)</span></p>
+          <div class="product__prices">
+            <span class="product__price">$149.00</span>
+            <span class="product__old">$189.00</span>
+          </div>
+          <button class="product__add" type="button" data-add="p6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            Añadir al carrito
+          </button>
+        </div>
+      </article>
+
+      <!-- Estado vacío -->
+      <div class="empty-state" id="empty-state" hidden>
+        <h3>Sin resultados</h3>
+        <p>No encontramos productos con esos criterios. Prueba otra categoría o borra la búsqueda.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROMOCIÓN CON CUENTA ATRÁS
+       ============================================================ -->
+  <section class="wrap reveal" id="oferta">
+    <div class="promo">
+      <div>
+        <span class="kicker">Oferta por tiempo limitado</span>
+        <h2>Hasta 40% de descuento en la colección de temporada</h2>
+        <p>Aplica a más de 60 modelos seleccionados. El descuento ya está reflejado en los precios. Stock limitado por talla.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="#productos">Aprovechar el descuento</a>
+          <a class="btn btn--light" href="#tallas">Ver guía de tallas</a>
+        </div>
+      </div>
+      <div class="countdown" id="countdown" role="timer" aria-live="off" aria-label="Tiempo restante de la oferta">
+        <div class="countdown__box"><b id="cd-days">00</b><span>Días</span></div>
+        <div class="countdown__box"><b id="cd-hours">00</b><span>Horas</span></div>
+        <div class="countdown__box"><b id="cd-minutes">00</b><span>Min</span></div>
+        <div class="countdown__box"><b id="cd-seconds">00</b><span>Seg</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GUÍA DE TALLAS
+       ============================================================ -->
+  <section class="section wrap reveal" id="tallas">
+    <div class="section-head">
+      <span class="kicker">Compra sin dudas</span>
+      <h2>Guía de tallas</h2>
+      <p>Mide tu pie al final del día, cuando está ligeramente más grande, y compara con la tabla.</p>
+    </div>
+
+    <div class="guide">
+      <div class="guide__steps">
+        <div class="step">
+          <span class="step__n" aria-hidden="true">1</span>
+          <div><h3>Apoya el pie sobre una hoja</h3><p>Pisa con el talón contra la pared y el peso repartido por igual.</p></div>
+        </div>
+        <div class="step">
+          <span class="step__n" aria-hidden="true">2</span>
+          <div><h3>Marca el punto más largo</h3><p>Traza una línea frente a la punta del dedo más largo, no del pulgar.</p></div>
+        </div>
+        <div class="step">
+          <span class="step__n" aria-hidden="true">3</span>
+          <div><h3>Mide en centímetros</h3><p>Repite con el otro pie y usa siempre la medida mayor de los dos.</p></div>
+        </div>
+        <div class="step">
+          <span class="step__n" aria-hidden="true">4</span>
+          <div><h3>Suma 5 mm de holgura</h3><p>Ese espacio evita roces al caminar y deja lugar para el movimiento natural.</p></div>
+        </div>
+        <button class="btn btn--out" type="button" id="unit-toggle" aria-pressed="false">Ver tabla en pulgadas</button>
+      </div>
+
+      <div>
+        <div class="table-card" id="table-cm">
+          <table>
+            <caption class="sr-only">Equivalencias de tallas en centímetros</caption>
+            <thead>
+              <tr><th scope="col">Talla EU</th><th scope="col">Talla US</th><th scope="col">Largo del pie</th><th scope="col">Ancho recomendado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>38</td><td>6</td><td>24.0 cm</td><td>Estándar</td></tr>
+              <tr><td>39</td><td>6.5</td><td>24.7 cm</td><td>Estándar</td></tr>
+              <tr><td>40</td><td>7.5</td><td>25.4 cm</td><td>Estándar</td></tr>
+              <tr><td>41</td><td>8</td><td>26.0 cm</td><td>Estándar</td></tr>
+              <tr><td>42</td><td>9</td><td>26.7 cm</td><td>Holgado</td></tr>
+              <tr><td>43</td><td>10</td><td>27.3 cm</td><td>Holgado</td></tr>
+              <tr><td>44</td><td>10.5</td><td>28.0 cm</td><td>Holgado</td></tr>
+              <tr><td>45</td><td>11.5</td><td>28.7 cm</td><td>Holgado</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-card" id="table-inches" hidden>
+          <table>
+            <caption class="sr-only">Equivalencias de tallas en pulgadas</caption>
+            <thead>
+              <tr><th scope="col">Talla EU</th><th scope="col">Talla US</th><th scope="col">Largo del pie</th><th scope="col">Ancho recomendado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>38</td><td>6</td><td>9.45 in</td><td>Estándar</td></tr>
+              <tr><td>39</td><td>6.5</td><td>9.72 in</td><td>Estándar</td></tr>
+              <tr><td>40</td><td>7.5</td><td>10.00 in</td><td>Estándar</td></tr>
+              <tr><td>41</td><td>8</td><td>10.24 in</td><td>Estándar</td></tr>
+              <tr><td>42</td><td>9</td><td>10.51 in</td><td>Holgado</td></tr>
+              <tr><td>43</td><td>10</td><td>10.75 in</td><td>Holgado</td></tr>
+              <tr><td>44</td><td>10.5</td><td>11.02 in</td><td>Holgado</td></tr>
+              <tr><td>45</td><td>11.5</td><td>11.30 in</td><td>Holgado</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="table-note">¿Estás entre dos tallas? Para calzado deportivo elige la mayor; para calzado formal de cuero, la menor. Si dudas, escríbenos por el chat y te ayudamos a decidir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OPINIONES
+       ============================================================ -->
+  <section class="section section--tight wrap reveal" id="opiniones">
+    <div class="section-head">
+      <span class="kicker">Opiniones reales</span>
+      <h2>Lo que dicen nuestros clientes</h2>
+      <p>Más de 12.000 pedidos entregados y una valoración media de 4.8 sobre 5.</p>
+    </div>
+
+    <div class="reviews">
+      <article class="review">
+        <p class="stars stars--lg">★★★★★</p>
+        <blockquote>«Pedí las de running para mis entrenamientos de 10 km y la amortiguación es notable. Llegaron en dos días y la talla fue exacta según la guía.»</blockquote>
+        <div class="review__who">
+          <span class="review__avatar" aria-hidden="true">MR</span>
+          <p><b>Mariana Restrepo</b><span>Medellín, Colombia</span></p>
+        </div>
+        <p class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Compra verificada</p>
+      </article>
+
+      <article class="review">
+        <p class="stars stars--lg">★★★★★</p>
+        <blockquote>«Necesitaba algo formal pero cómodo para la oficina. Los oxford son de cuero real, se ven elegantes y aguantan el día completo de pie.»</blockquote>
+        <div class="review__who">
+          <span class="review__avatar" aria-hidden="true">JC</span>
+          <p><b>Julián Cortés</b><span>Bogotá, Colombia</span></p>
+        </div>
+        <p class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Compra verificada</p>
+      </article>
+
+      <article class="review">
+        <p class="stars stars--lg">★★★★☆</p>
+        <blockquote>«Gran relación calidad-precio en las botas de senderismo. Solo pediría más variedad de colores, pero el cambio de talla fue rápido y sin costo.»</blockquote>
+        <div class="review__who">
+          <span class="review__avatar" aria-hidden="true">LF</span>
+          <p><b>Lucía Fernández</b><span>Lima, Perú</span></p>
+        </div>
+        <p class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Compra verificada</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PREGUNTAS FRECUENTES
+       ============================================================ -->
+  <section class="section wrap reveal" id="faq">
+    <div class="section-head section-head--center">
+      <span class="kicker">Antes de comprar</span>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-1">¿Cuánto tarda el envío y cuánto cuesta?</button>
+        </h3>
+        <div class="faq__a" id="faq-1" role="region">
+          <p>Preparamos tu pedido en menos de 24 horas hábiles. La entrega es de 24 a 48 horas en ciudades principales y de 3 a 5 días en zonas alejadas. El envío es gratis en compras desde $80; por debajo de ese monto cuesta $6.90.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-2">¿Puedo cambiar la talla si no me queda?</button>
+        </h3>
+        <div class="faq__a" id="faq-2" role="region">
+          <p>Sí. Tienes 30 días calendario desde la entrega para solicitar un cambio de talla o una devolución. El primer cambio de talla es gratuito: coordinamos la recogida y el nuevo envío sin costo adicional.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-3">¿Los productos son originales y tienen garantía?</button>
+        </h3>
+        <div class="faq__a" id="faq-3" role="region">
+          <p>Todos nuestros productos son originales y se despachan con factura. Cuentan con un año de garantía ante defectos de fabricación: costuras, despegue de suela o fallas en los materiales.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-4">¿Qué medios de pago aceptan?</button>
+        </h3>
+        <div class="faq__a" id="faq-4" role="region">
+          <p>Aceptamos tarjetas Visa, Mastercard y American Express, PayPal, transferencias locales y pago contra entrega en ciudades habilitadas. También ofrecemos cuotas sin interés en compras superiores a $150.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-5">No sé qué talla elegir, ¿me ayudan?</button>
+        </h3>
+        <div class="faq__a" id="faq-5" role="region">
+          <p>Por supuesto. Revisa la guía de tallas de esta página y, si sigues con dudas, escríbenos con la medida de tu pie en centímetros. Nuestro equipo te recomienda la talla exacta según el modelo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOLETÍN
+       ============================================================ -->
+  <section class="wrap reveal" aria-label="Suscripción al boletín">
+    <div class="newsletter">
+      <h2>10% de descuento en tu primera compra</h2>
+      <p>Suscríbete y recibe el cupón al instante, además de acceso anticipado a lanzamientos y ofertas privadas.</p>
+
+      <form id="newsletter-form" novalidate>
+        <label class="sr-only" for="newsletter-email">Correo electrónico</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="tu@correo.com" required>
+        <button class="btn btn--dark" type="submit">Quiero mi cupón</button>
+      </form>
+
+      <p class="form-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+      <small>Sin spam. Puedes darte de baja cuando quieras.</small>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     PIE DE PÁGINA
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <span class="logo__mark" style="width:30px;height:30px;border-radius:10px" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h13l-1-6H4v6Z"/><path d="m17 10 2.2 1.5L22 13v3H4"/><path d="M7 16v3M17 16v3"/></svg>
+          </span>
+          VOLTA
+        </div>
+        <p style="font-size:.9rem;max-width:320px">Calzado cómodo, duradero y honesto. Diseñado para acompañarte en cada paso, del entrenamiento a la oficina.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3H12V6.5A.5.5 0 0 1 12.5 6H15V3Z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V3c.6 2.4 2.4 4 5 4"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 8.5c0 4 3 7 7 7"/></svg></a>
+        </div>
+      </div>
+
+      <nav aria-labelledby="foot-shop">
+        <h2 id="foot-shop">Comprar</h2>
+        <ul class="footer__links">
+          <li><a href="#productos">Running</a></li>
+          <li><a href="#productos">Casual</a></li>
+          <li><a href="#productos">Formal</a></li>
+          <li><a href="#productos">Botas</a></li>
+          <li><a href="#oferta">Ofertas</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="foot-help">
+        <h2 id="foot-help">Ayuda</h2>
+        <ul class="footer__links">
+          <li><a href="#tallas">Guía de tallas</a></li>
+          <li><a href="#faq">Envíos y entregas</a></li>
+          <li><a href="#faq">Cambios y devoluciones</a></li>
+          <li><a href="#faq">Medios de pago</a></li>
+          <li><a href="#faq">Contáctanos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="foot-company">
+        <h2 id="foot-company">Empresa</h2>
+        <ul class="footer__links">
+          <li><a href="#inicio">Sobre VOLTA</a></li>
+          <li><a href="#inicio">Sostenibilidad</a></li>
+          <li><a href="#inicio">Trabaja con nosotros</a></li>
+          <li><a href="#inicio">Términos y condiciones</a></li>
+          <li><a href="#inicio">Política de privacidad</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> VOLTA. Todos los derechos reservados.</span>
+      <div class="payments">
+        <span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>PSE</span><span>CONTRA ENTREGA</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     CARRITO LATERAL
+     ============================================================ -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart" id="cart" aria-label="Carrito de compras" aria-hidden="true" inert>
+  <header class="cart__head">
+    <h2>Tu carrito (<span id="cart-count">0</span>)</h2>
+    <button class="icon-btn" type="button" id="cart-close" aria-label="Cerrar carrito">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </header>
+
+  <div class="cart__body" id="cart-body"></div>
+
+  <footer class="cart__foot">
+    <div class="progress" role="progressbar" aria-label="Progreso hacia el envío gratis" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="ship-progress">
+      <i id="ship-bar"></i>
+    </div>
+    <p class="progress-note" id="ship-note">Añade productos para calcular tu envío.</p>
+
+    <p class="summary"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></p>
+    <p class="summary"><span>Envío</span><span id="cart-shipping">—</span></p>
+    <p class="summary summary--total"><span>Total</span><span id="cart-total">$0.00</span></p>
+
+    <button class="btn btn--accent btn--block" type="button" id="checkout">Finalizar compra</button>
+  </footer>
+</aside>
+
+<!-- ============================================================
+     FICHA RÁPIDA (MODAL)
+     ============================================================ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true" inert>
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__panel">
+    <button class="modal__close" type="button" id="modal-close" aria-label="Cerrar ficha del producto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="modal__grid" id="modal-content"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     AVISO FLOTANTE Y VOLVER ARRIBA
+     ============================================================ -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+  <span id="toast-message">Producto añadido</span>
+</div>
+
+<button class="to-top" type="button" id="to-top" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Comportamiento -->
+<script src="script.js" defer></script>
+</body>
+</html>
